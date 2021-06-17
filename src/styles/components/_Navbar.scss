@@ -1,0 +1,128 @@
+.navbar {
+    height: 100px;
+    background-color: $order-button;
+    display: flex;
+    padding: 0 150px;
+    justify-content: space-between;
+
+    .left-side {
+        flex: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 70px;
+        }
+    }
+
+    .right-side {
+        flex: 50%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        button {
+            background-color: transparent;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        svg {
+            font-size: 40px;
+        }
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        margin: 20px;
+    }
+
+    #open {
+        padding-left: 0px;
+
+        img {
+            display: none;
+        }
+
+        .hidden-links {
+            display: inherit;
+        }
+
+        a {
+            width: 70px;
+            margin: 5px;
+        }
+    }
+
+    #close {
+        img {
+            display: inherit;
+        }
+
+        .hidden-links {
+            display: none;
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .navbar {
+        padding: 0 50px;
+
+        .right-side {
+            a {
+                width: 70px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar {
+        .right-side {
+            justify-content: flex-end;
+
+            a {
+                display: none;
+            }
+
+            button {
+                display: inherit;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .navbar {
+        .left-side {
+            img {
+                display: inherit;
+            }
+
+            .hidden-links {
+                display: none;
+            }
+        }
+
+        .right-side {
+            button {
+                display: none;
+            }
+        }
+
+        #open {
+            img {
+                display: inherit;
+            }
+
+            .hidden-links {
+                display: none;
+            }
+        }
+    }
+}
